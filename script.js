@@ -4,8 +4,9 @@
 // Prority drop down
 
 // Java Script
-// Delete button to delete from list
-// Done checkmark box
+// Delete button to delete from list - Add Functionality
+// Done checkmark box - Add Functionality
+// Figure out how to format task Manage (Spacing bwten variables)
 
 // CSS
 // Important tasks must be in red
@@ -13,6 +14,7 @@
 // Apply styles based on priority
 
 // Bugs
+// HTML not on one line
 // The task list updates all tasks values to the newest task
 // CSS isn't CSSing
 
@@ -38,7 +40,7 @@ function addTask(){
     newTask.date = "test";
 
     taskList.push(newTask); // Adds the newTask to the list (at the end)
-    taskManage.innerHTML += `${newTask.name}    Priority:${newTask.priority}  Important:${newTask.important}   ${newTask.date} </br>`; // Adds the task to the div
+    taskManage.innerHTML += `<input type="checkbox" class="doneTask">${newTask.name}  Priority:${newTask.priority} Important:${newTask.important} ${newTask.date} <button type="button" class="delete">X</button></br>`; // Adds the task to the div
     console.log(JSON.stringify(taskList)); // Logs a string of the whole list of tasks
 };
 
