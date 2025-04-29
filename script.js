@@ -25,24 +25,24 @@ let task = document.getElementById("task"); // The text input
 let importYN = document.getElementById("checkBox"); // The check box
 let button = document.getElementById("subButt"); // thesubmit button
 
-button.addEventListener("click", addTask)
+button.addEventListener("click", addTask);
 
-newTask = {} // Empty object to be filled later
+newTask = {}; // Empty object to be filled later
 
 function addTask(){
     // Defines the task
-    newTask.name = task.value,
-    newTask.priority = "Test"
-    newTask.important = "Test"
-    newTask.complete = "N"
-    newTask.date = "test"
+    newTask.name = task.value;
+    newTask.priority = "Test";
+    newTask.important = "Test";
+    newTask.complete = "N";
+    newTask.date = "test";
 
-    taskList.push(newTask)
-    taskManage.innerHTML += `${newTask.name}    Priority:${newTask.priority}  Important:${newTask.important}   ${newTask.date} </br>` // Adds the task to the div
-    console.log(JSON.stringify(taskList))
-}
+    taskList.push(newTask); // Adds the newTask to the list (at the end)
+    taskManage.innerHTML += `${newTask.name}    Priority:${newTask.priority}  Important:${newTask.important}   ${newTask.date} </br>`; // Adds the task to the div
+    console.log(JSON.stringify(taskList)); // Logs a string of the whole list of tasks
+};
 
-// The stuff
+// The tasks
 let taskList = [
     
-]
+];
