@@ -5,7 +5,7 @@
 
 // Java Script
 // Delete button to delete from list
-// Done check mark box
+// Done checkmark box
 
 // CSS
 // Important tasks must be in red
@@ -14,6 +14,7 @@
 
 // Bugs
 // The task list updates all tasks values to the newest task
+// CSS isn't CSSing
 
 
 
