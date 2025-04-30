@@ -26,25 +26,28 @@ let taskManage = document.getElementById("taskmanager"); // The Div
 let task = document.getElementById("task"); // The text input
 let importYN = document.getElementById("checkBox"); // The check box
 let button = document.getElementById("subButt"); // thesubmit button
+let priority = document.getElementById("priorities")
+x = 0;
 
-button.addEventListener("click", addTask);
-
-newTask = {}; // Empty object to be filled later
-
-function addTask(){
-    // Defines the task
-    newTask.name = task.value;
-    newTask.priority = "Test";
-    newTask.important = "Test";
-    newTask.complete = "N";
-    newTask.date = "test";
-
-    taskList.push(newTask); // Adds the newTask to the list (at the end)
-    taskManage.innerHTML += `<input type="checkbox" class="doneTask">${newTask.name}  Priority:${newTask.priority} Important:${newTask.important} ${newTask.date} <button type="button" class="delete">X</button></br>`; // Adds the task to the div
-    console.log(JSON.stringify(taskList)); // Logs a string of the whole list of tasks
-};
+button.addEventListener("click", addTask(task.value));
 
 // The tasks
 let taskList = [
     
 ];
+
+function addTask(thing){
+    thing = {}
+
+    // Defines the task
+    thing.id = x += 1;
+    thing.name = task.value;
+    thing.priority = priority.value;
+    thing.important = 
+    thing.complete = "N";
+    thing.date = "test";
+
+    taskList.push(thing); // can not access task list b4 intit?????
+    taskManage.innerHTML += `<input type="checkbox" class="doneTask">${thing.id} ${thing.name}  Priority:${thing.priority} Important:${thing.important} ${thing.date} <button type="button" class="delete">X</button></br>`; // Adds the task to the div
+    console.log(JSON.stringify(taskList)); // Logs a string of the whole list of tasks
+};
