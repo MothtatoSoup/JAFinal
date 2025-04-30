@@ -1,8 +1,8 @@
 
-body{
-    color:slateblue,
-} 
-h2{
-    color:coral,
+body {
+
+    background-color:slateblue
 }
-  
+h1,h2,div,p {
+    color: rgb(164, 157, 210);
+}

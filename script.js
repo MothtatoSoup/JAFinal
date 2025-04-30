@@ -12,6 +12,7 @@
 // HTML not on one line
 // The task list overwrites all tasks values to the newest task
 // CSS isn't CSSing
+//      It doesn't want {} but then it wants {}
 
 
 // I can't get the individual tasks because the list keeps overwriting (No done, delte or specific styling)
