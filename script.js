@@ -31,32 +31,34 @@ let isImport = 0
 let x = 0;
 
 // The tasks
-let taskList = [0];
+let taskList = [];
 let newTask = {}
 
 button.addEventListener("click", addTask);
 
 function addTask(){
-    newTask.value = {}
-
-    if(importYN.checked){ // checks if important
-        isImport = "Y"
+    if (task.value == ""){ // Checks if the input is empty
+        window.alert("Invalid Task, Can't be empty")
     }else{
-        isImport = "N"
-    }
-
-    // Defines the task
-    newTask.id = x += 1;
-    newTask.name = task.value;
-    newTask.priority = priority.value;
-    newTask.important = isImport
-    newTask.complete = "N";
-    newTask.date = "test";
+        if(importYN.checked){ // checks if important
+            isImport = "Y"
+        }else{
+            isImport = "N"
+        }
     
-    taskList.push(newTask) // adds task to back of list
-    // Appends the task and stuff to the dive
-    taskManage.innerHTML += `<input type="checkbox" id="doneTask${newTask.id}">${newTask.id} ${newTask.name}  Priority:${newTask.priority} Important:${newTask.important} ${newTask.date} <button type="button" class="delete">X</button></br>`; // Adds the task to the div
-    console.log(JSON.stringify(taskList)); // Logs a string of the whole list of tasks
+        // Defines the task
+        newTask.id = x += 1;
+        newTask.name = task.value;
+        newTask.priority = priority.value;
+        newTask.important = isImport
+        newTask.complete = "N";
+        newTask.date = "test";
+        
+        taskList.push(newTask) // adds task to back of list
+        // Appends the task and stuff to the dive
+        taskManage.innerHTML += `<input type="checkbox" id="doneTask${newTask.id}">${newTask.id} ${newTask.name}  Priority:${newTask.priority} Important:${newTask.important} ${newTask.date} <button type="button" class="delete">X</button></br>`; // Adds the task to the div
+        console.log(JSON.stringify(taskList)); // Logs a string of the whole list of tasks
+    }
 };
 
 
